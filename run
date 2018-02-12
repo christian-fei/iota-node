@@ -8,3 +8,15 @@ docker run \
   -p 15777:15777 \
   -v ~/iota.ini:/iri/iota.ini \
   iotaledger/iri:latest
+
+docker run \
+  -d \
+  --name nelson \
+  -p 18600:18600 \
+  --name nelson \
+  romansemko/nelson.cli \
+  -r localhost \
+  -i 14265 \
+  -u 14777 \
+  -t 15777 \
+  --neighbors "mainnet.deviota.com/16600 mainnet2.deviota.com/16600 mainnet3.deviota.com/16600 iotairi.tt-tec.net/16600"
